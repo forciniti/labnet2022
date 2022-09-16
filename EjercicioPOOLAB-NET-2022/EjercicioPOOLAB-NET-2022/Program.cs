@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EjercicioPOOLAB_NET_2022
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
