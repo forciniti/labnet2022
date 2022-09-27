@@ -28,7 +28,7 @@ namespace Lab.EF.Logic
         }
 
         public void Update(Shippers record)
-        {
+        {         
             var shipperUpdate = _context.Shippers.Find(record.ShipperID);
             shipperUpdate.CompanyName= record.CompanyName;
             _context.SaveChanges();
