@@ -14,9 +14,9 @@ namespace Lab.EF.Logic
         {
             return _context.Shippers.ToList();
         }
-        public void Add(Shippers newShipper)
+        public void Add(Shippers newRecord)
         {
-            _context.Shippers.Add(newShipper);
+            _context.Shippers.Add(newRecord);
             _context.SaveChanges();
         }
 
@@ -27,10 +27,10 @@ namespace Lab.EF.Logic
             _context.SaveChanges();
         }
 
-        public void Update(Shippers shipper)
+        public void Update(Shippers record)
         {
-            var shipperUpdate = _context.Shippers.Find(shipper.ShipperID);
-            shipperUpdate.Phone= shipper.Phone;
+            var shipperUpdate = _context.Shippers.Find(record.ShipperID);
+            shipperUpdate.CompanyName= record.CompanyName;
             _context.SaveChanges();
         }
     }

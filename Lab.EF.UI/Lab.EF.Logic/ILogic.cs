@@ -10,9 +10,9 @@ namespace Lab.EF.Logic
     public interface ILogic<T>
     {
         List<T> GetAll();
-        void Add( T newAdd);
+        void Add( T newRecord);
         void Delete(int id);
 
-        void Update(T actualizacion);
+        void Update(T record);
     }
 }

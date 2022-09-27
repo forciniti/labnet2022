@@ -10,24 +10,30 @@ namespace Lab.EF.Logic
 {
     public class SuppliersLogic : BaseLogic, ILogic<Suppliers>
     {
-        public void Add(Suppliers newSupplier)
+        public List<Suppliers> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Suppliers.ToList();
+        }
+
+        public void Add(Suppliers newRecord)
+        {
+            _context.Suppliers.Add(newRecord);
+            _context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var supplierXEliminar = _context.Suppliers.Find(id);
+            _context.Suppliers.Remove(supplierXEliminar);
+            _context.SaveChanges();
         }
 
-        public List<Suppliers> GetAll()
+    
+        public void Update(Suppliers record)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Suppliers actualizacion)
-        {
-            throw new NotImplementedException();
+            var supplierUpdate = _context.Suppliers.Find(record.SupplierID);
+            supplierUpdate.Phone = record.Phone;
+            _context.SaveChanges();
         }
     }
 }
