@@ -93,17 +93,28 @@ namespace Lab.EF.UI
             }
             if (x == 2)
             {
-                Console.Clear();
-                Console.WriteLine("Enter a CompanyName");
-                string w = "";
-                w = Console.ReadLine();
-
-                shl.Add(new Shippers
+                try
                 {
-                    CompanyName = w
+                    Console.Clear();
+                    Console.WriteLine("Enter a CompanyName to ADD");
+                    string w = "";
+                    w = Console.ReadLine();
+
+                    shl.Add(new Shippers
+                    {
+                        CompanyName = w
+                    }
+                          );
+                    x = 0;
                 }
-                      );
-                x = 0;
+                catch (Exception)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Enter a valid CompanyName to ADD");
+                    Console.WriteLine("");
+                    x = 0;
+                }
+
             }
 
             if (x == 3)
