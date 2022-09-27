@@ -78,12 +78,15 @@ namespace Lab.EF.UI
 
             if (x == 1)
             {
+                Console.Clear();
+                Console.WriteLine("                  SUPPLIERS LIST                 ");
                 foreach (var item in suppliers)
                 {
                     Console.WriteLine($"(id){item.SupplierID} - (SupplierName){item.CompanyName} - (ContactName){item.ContactName} - (Adreess, city){item.Address}, {item.City}");
                 }
 
                 Console.WriteLine("---------------------------------------------------------");
+                Console.WriteLine("                   SHIPPERS LIST                 ");
 
                 foreach (var item in shippers)
                 {
