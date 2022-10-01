@@ -1,4 +1,5 @@
 ﻿using Lab.EF.Data;
+using Lab.EF.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,9 @@ namespace Lab.EF.Logic
             _context = new NorthwindContext();
         }
 
+        public List<Customers> GetAll()
+        {
+            return _context.Customers.ToList();
+        }
     }
 }
