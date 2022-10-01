@@ -1,5 +1,4 @@
-﻿using Lab.EF.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +9,6 @@ namespace Lab.EF.Logic
     public interface ILogic<T>
     {
         List<T> GetAll();
+
     }
 }

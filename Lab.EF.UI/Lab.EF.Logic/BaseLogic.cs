@@ -17,9 +17,5 @@ namespace Lab.EF.Logic
             _context = new NorthwindContext();
         }
 
-        public List<Customers> GetAll()
-        {
-            return _context.Customers.ToList();
-        }
     }
 }

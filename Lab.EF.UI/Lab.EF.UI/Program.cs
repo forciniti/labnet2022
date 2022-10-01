@@ -38,10 +38,10 @@ namespace Lab.EF.UI
         }
         public static int IngresoDatos(int x)
         {
-            SuppliersLogic sl = new SuppliersLogic();
-            ShippersLogic shl = new ShippersLogic();
-            var suppliers = sl.GetAll();
-            var shippers = shl.GetAll();
+            CustomersLogic c = new CustomersLogic();
+            ProductsLogic p = new ProductsLogic();
+            var products = c.GetAll();
+            var customers = p.GetAll();
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("Enter 1 to view list of suppliers and shippers list");
