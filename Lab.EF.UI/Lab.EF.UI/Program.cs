@@ -38,23 +38,13 @@ namespace Lab.EF.UI
         }
         public static int IngresoDatos(int x)
         {
-            CustomersLogic c = new CustomersLogic();
-            ProductsLogic p = new ProductsLogic();
-            var products = c.GetAll();
-            var customers = p.GetAll();
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("Enter 1 to view list of suppliers and shippers list");
+            Console.WriteLine("Enter the number  of the query that you want to see ");
             Console.WriteLine("---------------------------------------------------------");
-            Console.WriteLine("Enter 2 to ADD a new record to Shippers");
+            Console.WriteLine("Enter 14 to EXIT");
             Console.WriteLine("---------------------------------------------------------");
-            Console.WriteLine("Enter 3 to DELETE a record to Shippers");
-            Console.WriteLine("---------------------------------------------------------");
-            Console.WriteLine("Enter 4 to UPDATE a record to Shippers");
-            Console.WriteLine("---------------------------------------------------------");
-            Console.WriteLine("Enter 5 to EXIT");
-            Console.WriteLine("---------------------------------------------------------");
-            Console.WriteLine("Enter 6 to CLEAN THE SCREEN");
+            Console.WriteLine("Enter 15 to CLEAN THE SCREEN");
 
             try
             {
@@ -76,11 +66,122 @@ namespace Lab.EF.UI
                 x = 0;
             }
 
+            if (x == 1)
+            {
+                Console.Clear();
+                Linq.linq(1);
+
+                x = 0;
+            }
+
+            if (x == 2)
+            {
+                Console.Clear();
+                Linq.linq(2);
+
+                x = 0;
+            }
+
+            if (x == 3)
+            {
+                Console.Clear();
+                Linq.linq(3);
+
+                x = 0;
+            }
+
+            if (x == 4)
+            {
+                Console.Clear();
+                Linq.linq(4);
+
+                x = 0;
+            }
+
             if (x == 5)
+            {
+                Console.Clear();
+                Linq.linq(5);
+
+                x = 0;
+            }
+
+            if (x == 6)
+            {
+                Console.Clear();
+                Linq.linq(6);
+
+                x = 0;
+            }
+
+            if (x == 7)
+            {
+                Console.Clear();
+                Linq.linq(7);
+
+                x = 0;
+            }
+
+            if (x == 8)
+            {
+                Console.Clear();
+                Linq.linq(8);
+
+                x = 0;
+            }
+
+            if (x == 9)
+            {
+                Console.Clear();
+                Linq.linq(9);
+
+                x = 0;
+            }
+
+            if (x == 10)
+            {
+                Console.Clear();
+                Linq.linq(10);
+
+                x = 0;
+            }
+
+            if (x == 11)
+            {
+                Console.Clear();
+                Linq.linq(11);
+
+                x = 0;
+            }
+
+            if (x == 12)
+            {
+                Console.Clear();
+                Linq.linq(12);
+
+                x = 0;
+            }
+
+            if (x == 13)
+            {
+                Console.Clear();
+                Linq.linq(13);
+
+                x = 0;
+            }
+
+            if (x == 14)
             {
 
                 Console.Clear();
-                x = 5;
+                x = 14;
+            }
+
+            if (x == 15)
+            {
+
+                Console.Clear();
+                x = 0;
             }
 
             if (x == 6)
@@ -89,7 +190,8 @@ namespace Lab.EF.UI
                 Console.Clear();
                 x = 0;
             }
-            if (x > 6)
+
+            if (x > 15)
             {
 
                 Console.Clear();
