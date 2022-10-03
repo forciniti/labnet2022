@@ -133,21 +133,10 @@ namespace Lab.EF.UI
                 var q7 = from Customers in customers
                          join Orders in orders
                          on Customers.Region equals "WA"
-                         select new { CUSTOMER_NAME = Customers.CompanyName, REGION = Customers.Region, ORDERID = Orders.CustomerID, ORDER_DATE = Orders.OrderDate };
-
-                List<string> q77 = new List<string>();              
-
+                         where Orders.OrderDate > date
+                         select new { CUSTOMER_NAME = Customers.CompanyName, REGION = Customers.Region, ORDERID = Orders.CustomerID, ORDER_DATE = Orders.OrderDate };    
+                
                 foreach (var item in q7)
-                {
-                    if(item.ORDER_DATE > date)
-                    {  
-                        q77.Add(item.REGION);
-                        q77.Add(item.ORDERID);
-                        q77.Add(item.ORDER_DATE.ToString());
-
-                    }
-                }
-                foreach (var item in q77)
                 {
                     Console.WriteLine(item);
                 }
