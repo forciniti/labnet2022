@@ -239,6 +239,7 @@ namespace Lab.EF.UI
                         Console.WriteLine(item);
                   
                 }
+                return 0;
             }
             Console.ReadKey();
     
