@@ -40,7 +40,7 @@ namespace Lab.EF.UI
         {
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("Enter the number  of the query that you want to see ");
+            Console.WriteLine("Enter the number  of  query that you want to see ");
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Enter 14 to EXIT");
             Console.WriteLine("---------------------------------------------------------");
