@@ -18,16 +18,16 @@ namespace Lab.EF.UI
         static void Main(string[] args)
         {
 
-            int x;
-            x = 0;
+            int opcion;
+            opcion = 0;
             int r = 1;
 
 
             for (int i = 0; i < r; i++)
             {
-                if (x == 0)
+                if (opcion == 0)
                 {
-                    x = IngresoDatos(x);
+                    opcion = IngresoDatos(opcion);
                     r++;
                 }
                 else
@@ -36,7 +36,7 @@ namespace Lab.EF.UI
                 }
             }
         }
-        public static int IngresoDatos(int x)
+        public static int IngresoDatos(int opcion)
         {
             Console.WriteLine("");
             Console.WriteLine("");
@@ -48,159 +48,151 @@ namespace Lab.EF.UI
 
             try
             {
-                x = int.Parse(Console.ReadLine());
+                opcion = int.Parse(Console.ReadLine());
             }
             catch (Exception)
             {
                 Console.Clear();
                 Console.WriteLine("Enter a valid option please!");
                 Console.WriteLine("");
-                x = 0;
+               opcion = 0;
             }
 
-            if (x < 0)
+            if (opcion < 0)
             {
                 Console.Clear();
                 Console.WriteLine("Enter a valid option please!");
                 Console.WriteLine("");
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 1)
+            if (opcion == 1)
             {
                 Console.Clear();
                 Linq.linq(1);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 2)
+            if (opcion == 2)
             {
                 Console.Clear();
                 Linq.linq(2);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 3)
+            if (opcion == 3)
             {
                 Console.Clear();
                 Linq.linq(3);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 4)
+            if (opcion == 4)
             {
                 Console.Clear();
                 Linq.linq(4);
 
-                x = 0;
+                opcion= 0;
             }
 
-            if (x == 5)
+            if (opcion == 5)
             {
                 Console.Clear();
                 Linq.linq(5);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 6)
+            if (opcion == 6)
             {
                 Console.Clear();
                 Linq.linq(6);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 7)
+            if (opcion == 7)
             {
                 Console.Clear();
                 Linq.linq(7);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 8)
+            if (opcion == 8)
             {
                 Console.Clear();
                 Linq.linq(8);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 9)
+            if (opcion == 9)
             {
                 Console.Clear();
                 Linq.linq(9);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 10)
+            if (opcion == 10)
             {
                 Console.Clear();
                 Linq.linq(10);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 11)
+            if (opcion == 11)
             {
                 Console.Clear();
                 Linq.linq(11);
 
-                x = 0;
+                opcion = 0;
             }
 
-            if (x == 12)
+            if (opcion == 12)
             {
                 Console.Clear();
                 Linq.linq(12);
 
-                x = 0;
+               opcion = 0;
             }
 
-            if (x == 13)
+            if (opcion == 13)
             {
                 Console.Clear();
                 Linq.linq(13);
 
-                x = 0;
+              opcion = 0;
             }
 
-            if (x == 14)
+            if (opcion == 14)
             {
 
                 Console.Clear();
-                x = 14;
+               opcion = 14;
             }
-
-            if (x == 15)
+          if  (opcion == 15)
             {
 
                 Console.Clear();
-                x = 0;
+               opcion = 0;
             }
 
-            if (x == 6)
-            {
-
-                Console.Clear();
-                x = 0;
-            }
-
-            if (x > 15)
+            if (opcion > 15)
             {
 
                 Console.Clear();
                 Console.Clear();
                 Console.WriteLine("Enter an EXISTENT OPTION please!");
                 Console.WriteLine("");
-                x = 0;
+                opcion = 0;
             }
-            return x;
+            return opcion;
         }
 
     }
