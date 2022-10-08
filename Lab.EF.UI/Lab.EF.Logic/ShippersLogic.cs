@@ -31,6 +31,7 @@ namespace Lab.EF.Logic
         {         
             var shipperUpdate = _context.Shippers.Find(record.ShipperID);
             shipperUpdate.CompanyName= record.CompanyName;
+            shipperUpdate.Phone = record.Phone;
             _context.SaveChanges();
         }
     }
