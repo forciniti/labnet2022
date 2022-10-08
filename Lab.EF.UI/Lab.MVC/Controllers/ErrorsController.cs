@@ -13,5 +13,9 @@ namespace Lab.MVC.Controllers
         {
             return View();
         }
+        public ActionResult ToIndex()
+        {
+            return RedirectToAction("Index","Shippers");
+        }
     }
 }

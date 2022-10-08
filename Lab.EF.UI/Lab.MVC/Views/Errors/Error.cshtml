@@ -1,1 +1,26 @@
-﻿<div class="alert alert-danger">TRY AGAIN</div>
+﻿<style>
+    body {
+        background-color: #f8d7da
+    }
+    #alert {
+  position :absolute;
+      left: 50%;
+  top: 50%;
+  transform :translateX(-50%) translateY(-50%);
+    }
+</style>
+<body>
+    <div id="alert" class="alert alert-danger" style="text-align:center">     
+        <input type="submit" class="btn btn-danger" value="ERROR! TRY AGAIN"  style= font-size:25px; onclick="toIndex();" />
+    </div>
+
+</body>
+<script>
+    var toIndex = function () {
+        var url = '@Url.Action("toIndex", "Errors")';
+        location.href = url;
+    };
+</script>
+
+
+            

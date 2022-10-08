@@ -59,6 +59,7 @@
 
 
 <script>
+
     //INSERT
     var add = function () {
         var companyName = $("#idCompanyNameAdd").val();
@@ -66,6 +67,7 @@
         var url = '@Url.Action("Insert","Shippers")/?companyName=' + companyName + '&phone='+ phone;
         location.href = url;
     };
+
     //UPDATE
     var update = function (id) {
         var id = document.querySelector("#id_"+id).value;
