@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    body {
+        background-color: #154360;
+        color: white;
+        font-size: 15px;
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #jokes {
+        color: gray;
+        font-weight: 700;
+    }
+</style>
+<h1>Shippers API</h1>
+<h4>Enjoy a joke while using the API!</h4>
+<br />
+
+<div id="jokes">
+    <p>@ViewBag.Jokes</p><input type="submit" class="btn btn-secondary" color="white" value="another joke?" onclick="toIndex();" />
+    <br />
+    <br />
+    <hr />
+
+</div>
+    <br />
+<div>
+    <h3>
+        GET api/ShippersApi
+    </h3>
+
+    <p>To get a shipper´s list</p>
+
+</div>
+
+<div>
+    <h3>
+        POST api/ShippersApi
+    </h3>
+    <p>
+        To add a new Shippers API, use this format:
+
+        {
+        "CompanyName" : "New CompanyName",
+        "Phone" : "New Phone"
+        }
+
+    </p>
+</div>
+
+<div>
+
+    <h3>
+        PUT api/ShippersApi/{id}
+    </h3>
+    <p>
+        Send as a parameter an id to UPDATE and then to updating a Shipper use this format:
+        {
+        "CompanyName" : "New CompanyName",
+        "Phone" : "New Phone"
+        }
+
+    </p>
+</div>
+
+<div>
+    <h3>
+        DELETE api/ShippersApi/{id}
+    </h3>
+    <p>
+        Send as a parameter an id to DELETE
+    </p>
+</div>
+
+<script>
+    var toIndex = function () {
+        var url = '@Url.Action("toIndex", "ApiView")';
+        location.href = url;
+    };
+</script>
