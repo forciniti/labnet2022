@@ -3,6 +3,7 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 
 namespace Lab.EF.Data
 {
@@ -37,8 +38,8 @@ namespace Lab.EF.Data
                 .Map(m => m.ToTable("CustomerCustomerDemo").MapLeftKey("CustomerTypeID").MapRightKey("CustomerID"));
 
             modelBuilder.Entity<Customers>()
-                .Property(e => e.CustomerID)
-                .IsFixedLength();
+                 .Property(e => e.CustomerID)
+                 .IsFixedLength();
 
             modelBuilder.Entity<Employees>()
                 .HasMany(e => e.Employees1)
@@ -93,6 +94,7 @@ namespace Lab.EF.Data
             modelBuilder.Entity<Territories>()
                 .Property(e => e.TerritoryDescription)
                 .IsFixedLength();
+
         }
     }
 }

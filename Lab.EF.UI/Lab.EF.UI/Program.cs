@@ -17,7 +17,7 @@ namespace Lab.EF.UI
     {
         static void Main(string[] args)
         {
-
+           
             int opcion;
             opcion = 0;
             int r = 1;
@@ -38,6 +38,7 @@ namespace Lab.EF.UI
         }
         public static int IngresoDatos(int opcion)
         {
+            LinqLogic linqLogic = new LinqLogic();
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("Enter the number  of  query that you want to see ");
@@ -69,7 +70,7 @@ namespace Lab.EF.UI
             if (opcion == 1)
             {
                 Console.Clear();
-                Linq.linq(1);
+                linqLogic.Linq(1);
 
                 opcion = 0;
             }
@@ -77,7 +78,7 @@ namespace Lab.EF.UI
             if (opcion == 2)
             {
                 Console.Clear();
-                Linq.linq(2);
+                linqLogic.Linq(2);
 
                 opcion = 0;
             }
@@ -85,7 +86,7 @@ namespace Lab.EF.UI
             if (opcion == 3)
             {
                 Console.Clear();
-                Linq.linq(3);
+                linqLogic.Linq(3);
 
                 opcion = 0;
             }
@@ -93,15 +94,15 @@ namespace Lab.EF.UI
             if (opcion == 4)
             {
                 Console.Clear();
-                Linq.linq(4);
+                linqLogic.Linq(4);
 
-                opcion= 0;
+                opcion = 0;
             }
 
             if (opcion == 5)
             {
                 Console.Clear();
-                Linq.linq(5);
+                linqLogic.Linq(5);
 
                 opcion = 0;
             }
@@ -109,15 +110,15 @@ namespace Lab.EF.UI
             if (opcion == 6)
             {
                 Console.Clear();
-                Linq.linq(6);
 
+                linqLogic.Linq(6);
                 opcion = 0;
             }
 
             if (opcion == 7)
             {
                 Console.Clear();
-                Linq.linq(7);
+                linqLogic.Linq(7);
 
                 opcion = 0;
             }
@@ -125,7 +126,7 @@ namespace Lab.EF.UI
             if (opcion == 8)
             {
                 Console.Clear();
-                Linq.linq(8);
+                linqLogic.Linq(8);
 
                 opcion = 0;
             }
@@ -133,7 +134,7 @@ namespace Lab.EF.UI
             if (opcion == 9)
             {
                 Console.Clear();
-                Linq.linq(9);
+                linqLogic.Linq(9);
 
                 opcion = 0;
             }
@@ -141,7 +142,7 @@ namespace Lab.EF.UI
             if (opcion == 10)
             {
                 Console.Clear();
-                Linq.linq(10);
+                linqLogic.Linq(10);
 
                 opcion = 0;
             }
@@ -149,7 +150,7 @@ namespace Lab.EF.UI
             if (opcion == 11)
             {
                 Console.Clear();
-                Linq.linq(11);
+                linqLogic.Linq(11);
 
                 opcion = 0;
             }
@@ -157,17 +158,17 @@ namespace Lab.EF.UI
             if (opcion == 12)
             {
                 Console.Clear();
-                Linq.linq(12);
+                linqLogic.Linq(12);
 
-               opcion = 0;
+                opcion = 0;
             }
 
             if (opcion == 13)
             {
                 Console.Clear();
-                Linq.linq(13);
+                linqLogic.Linq(13);
 
-              opcion = 0;
+                opcion = 0;
             }
 
             if (opcion == 14)
