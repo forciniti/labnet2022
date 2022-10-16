@@ -7,11 +7,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 using HttpPutAttribute = System.Web.Http.HttpPutAttribute;
 
 namespace Lab.WebApi.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ShippersApiController : ApiController
     {
         // GET: api/ShippersApi
@@ -40,6 +42,7 @@ namespace Lab.WebApi.Controllers
         }
 
         //POST: api/ShippersApi
+
         public IHttpActionResult AddShipper([FromBody] ShippersModel shipperModel)
         {
             try
