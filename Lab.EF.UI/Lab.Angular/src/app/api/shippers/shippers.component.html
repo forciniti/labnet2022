@@ -1,0 +1,83 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Shippers CRUD</h1>
+        <div class="container-fluid">
+            <div class="col-4">
+
+                <h2>Select operation</h2>
+
+                    <form [formGroup]="form">
+
+                            <div id="options">
+                                <input type="radio" id="InsertOption" name="options" value="Insert" checked (click)="DesactivateID()">
+                                <label id="Insert" for="Insert">Insert</label>
+                                <input type="radio" id="UpdateOption" name="options" value="Update" (click)="ActivateID()">
+                                <label for="Update">Update</label>
+                                <input type="radio" id="DeleteOption" name="options" value="Delete" (click)="DesactivateAllExceptId()">
+                                <label for="Update">Delete</label>
+                            </div>
+
+                            <div class="form-group">
+
+                                <fieldset disabled id="idInput">
+                                    <input  class="form-control" id="idInputForm" formControlName="id" type="text" 
+                                    placeholder="Shipper´s id [only numbers]"maxlength="3"
+                                    onkeypress="return event.charCode>=48 && event.charCode<=57" >
+                                </fieldset>
+
+                                <fieldset disabled id="idCompanyAndPhone">
+                                    <input class="form-control" id="idCompanyNameForm" formControlName="CompanyName" type="text"
+                                        placeholder="Shipper´s company name">
+                                    <input class="form-control" id="idPhoneForm" formControlName="Phone" type="text"
+                                        placeholder="Shipper´s phone number [only numbers]" maxlength="12"
+                                        onkeypress="return event.charCode>=48 && event.charCode<=57">
+                                </fieldset>
+
+                            </div>
+
+                        <div class="center">
+                            <button class="pulse" id="Button" (click)="Save()" *ngIf="toDel; else elseBlock">Delete</button>
+                            <ng-template #elseBlock><button class="pulse" id="Button" (click)="Save()">Save</button></ng-template>
+                            <button class ="pulse" id ="Button" (click)="reload()">Refresh</button>
+                        </div>
+
+                    </form>
+            </div>
+        </div>
+
+    <h1>Shipper´s List</h1>
+    
+        <table class="table">
+            <thead>
+
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Company Name</th>
+                    <th scope="col">Phone</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let Shippers of ShippersList;">
+                    <td>
+                        {{Shippers.id}}
+                    </td>
+                    <td>
+                        {{Shippers.companyName}}
+                    </td>
+                    <td>
+                        {{Shippers.phone}}
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+</body>
