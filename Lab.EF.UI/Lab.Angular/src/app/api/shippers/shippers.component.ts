@@ -172,8 +172,8 @@ export class ShippersComponent implements OnInit {
         })
       }
     }
-  }
-  reload(){
-    location.reload();
+    setTimeout(function(){
+      location.reload();
+    },3000);
   }
 }

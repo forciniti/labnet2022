@@ -43,7 +43,6 @@
                         <div class="center">
                             <button class="pulse" id="Button" (click)="Save()" *ngIf="toDel; else elseBlock">Delete</button>
                             <ng-template #elseBlock><button class="pulse" id="Button" (click)="Save()">Save</button></ng-template>
-                            <button class ="pulse" id ="Button" (click)="reload()">Refresh</button>
                         </div>
 
                     </form>
