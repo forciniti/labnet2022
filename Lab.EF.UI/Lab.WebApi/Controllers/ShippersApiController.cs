@@ -67,16 +67,25 @@ namespace Lab.WebApi.Controllers
         {
             try
             {
+                int idExistent = logic.GetAll().Where(x => x.ShipperID == id).Count();
                 Shippers shipp = new Shippers()
                 {
                     ShipperID = id,
                     CompanyName = shipperModel.companyName,
                     Phone = shipperModel.phone
                 };
-                this.logic.Update(shipp);
 
-                return Content(HttpStatusCode.OK, shipp);
+                if (idExistent == 1)
+                {
+                    this.logic.Update(shipp);
+                    return Content(HttpStatusCode.OK, shipp);
+                }
+                else
+                {
+                    return Content(HttpStatusCode.BadRequest, shipp);
+                }
             }
+
             catch (Exception ex)
             {
                 return Content(HttpStatusCode.BadRequest, ex);
@@ -85,19 +94,18 @@ namespace Lab.WebApi.Controllers
         }
         //DELETE: api/ShippersDelete/{id}
         public IHttpActionResult DeleteShipper(int id)
-        {
+        {   
             try
             {
+                    logic.Delete(id);
 
-                logic.Delete(id);
-
-                return Ok("id " + id + " DELETED");
+                    return Ok("id " + id + " DELETED");
+                
             }
             catch (Exception ex)
             {
                 return Content(HttpStatusCode.NotAcceptable, ex);
             }
-
         }
 
     }
